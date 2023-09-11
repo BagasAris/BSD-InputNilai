@@ -11,4 +11,12 @@
         Me.Hide()
         FLogin.Show()
     End Sub
+
+    Private Sub MataPelajaranToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MataPelajaranToolStripMenuItem.Click
+        FMataPelajaran.Show()
+    End Sub
+
+    Private Sub LaporanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LaporanToolStripMenuItem.Click
+        FLaporan.Show()
+    End Sub
 End Class

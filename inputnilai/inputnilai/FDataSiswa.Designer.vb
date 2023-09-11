@@ -39,6 +39,8 @@ Partial Class FDataSiswa
         Me.cariBtn = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.nisnTxt = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.DGdatasiswa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,7 +55,7 @@ Partial Class FDataSiswa
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(310, 60)
+        Me.Label1.Location = New System.Drawing.Point(355, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(87, 13)
         Me.Label1.TabIndex = 1
@@ -62,7 +64,7 @@ Partial Class FDataSiswa
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(424, 131)
+        Me.Label2.Location = New System.Drawing.Point(424, 91)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(33, 13)
         Me.Label2.TabIndex = 2
@@ -71,7 +73,7 @@ Partial Class FDataSiswa
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(33, 127)
+        Me.Label3.Location = New System.Drawing.Point(33, 87)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(35, 13)
         Me.Label3.TabIndex = 3
@@ -80,7 +82,7 @@ Partial Class FDataSiswa
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(33, 95)
+        Me.Label4.Location = New System.Drawing.Point(33, 55)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(16, 13)
         Me.Label4.TabIndex = 4
@@ -97,21 +99,21 @@ Partial Class FDataSiswa
         '
         'idTxt
         '
-        Me.idTxt.Location = New System.Drawing.Point(112, 92)
+        Me.idTxt.Location = New System.Drawing.Point(112, 52)
         Me.idTxt.Name = "idTxt"
         Me.idTxt.Size = New System.Drawing.Size(285, 20)
         Me.idTxt.TabIndex = 6
         '
         'namaTxt
         '
-        Me.namaTxt.Location = New System.Drawing.Point(112, 124)
+        Me.namaTxt.Location = New System.Drawing.Point(112, 84)
         Me.namaTxt.Name = "namaTxt"
         Me.namaTxt.Size = New System.Drawing.Size(285, 20)
         Me.namaTxt.TabIndex = 7
         '
         'kelasTxt
         '
-        Me.kelasTxt.Location = New System.Drawing.Point(503, 124)
+        Me.kelasTxt.Location = New System.Drawing.Point(503, 84)
         Me.kelasTxt.Name = "kelasTxt"
         Me.kelasTxt.Size = New System.Drawing.Size(285, 20)
         Me.kelasTxt.TabIndex = 8
@@ -172,7 +174,7 @@ Partial Class FDataSiswa
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(424, 95)
+        Me.Label6.Location = New System.Drawing.Point(424, 55)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(71, 13)
         Me.Label6.TabIndex = 15
@@ -181,16 +183,34 @@ Partial Class FDataSiswa
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(503, 87)
+        Me.ComboBox1.Location = New System.Drawing.Point(503, 47)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(285, 21)
         Me.ComboBox1.TabIndex = 16
+        '
+        'nisnTxt
+        '
+        Me.nisnTxt.Location = New System.Drawing.Point(112, 120)
+        Me.nisnTxt.Name = "nisnTxt"
+        Me.nisnTxt.Size = New System.Drawing.Size(285, 20)
+        Me.nisnTxt.TabIndex = 18
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(33, 123)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(28, 13)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "Nisn"
         '
         'FDataSiswa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.nisnTxt)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cariBtn)
@@ -233,4 +253,6 @@ Partial Class FDataSiswa
     Friend WithEvents cariBtn As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents nisnTxt As TextBox
+    Friend WithEvents Label7 As Label
 End Class

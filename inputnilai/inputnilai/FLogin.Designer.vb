@@ -38,7 +38,8 @@ Partial Class FLogin
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Gray
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.ShowBtn)
         Me.Panel1.Controls.Add(Me.batalBtn)
         Me.Panel1.Controls.Add(Me.loginBtn)
@@ -47,81 +48,111 @@ Partial Class FLogin
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(156, 64)
+        Me.Panel1.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Panel1.Location = New System.Drawing.Point(152, 64)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(492, 335)
+        Me.Panel1.Size = New System.Drawing.Size(525, 335)
         Me.Panel1.TabIndex = 2
         '
         'ShowBtn
         '
-        Me.ShowBtn.Location = New System.Drawing.Point(363, 230)
+        Me.ShowBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ShowBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ShowBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ShowBtn.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ShowBtn.ForeColor = System.Drawing.Color.Black
+        Me.ShowBtn.Location = New System.Drawing.Point(427, 188)
         Me.ShowBtn.Name = "ShowBtn"
         Me.ShowBtn.Size = New System.Drawing.Size(75, 23)
         Me.ShowBtn.TabIndex = 7
         Me.ShowBtn.Text = "SHOW"
-        Me.ShowBtn.UseVisualStyleBackColor = True
+        Me.ShowBtn.UseVisualStyleBackColor = False
         '
         'batalBtn
         '
-        Me.batalBtn.Location = New System.Drawing.Point(272, 230)
+        Me.batalBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.batalBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.batalBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.batalBtn.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.batalBtn.ForeColor = System.Drawing.Color.Black
+        Me.batalBtn.Location = New System.Drawing.Point(346, 236)
         Me.batalBtn.Name = "batalBtn"
         Me.batalBtn.Size = New System.Drawing.Size(75, 23)
         Me.batalBtn.TabIndex = 6
         Me.batalBtn.Text = "BATAL"
-        Me.batalBtn.UseVisualStyleBackColor = True
+        Me.batalBtn.UseVisualStyleBackColor = False
         '
         'loginBtn
         '
-        Me.loginBtn.Location = New System.Drawing.Point(182, 230)
+        Me.loginBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.loginBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.loginBtn.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loginBtn.ForeColor = System.Drawing.Color.Black
+        Me.loginBtn.Location = New System.Drawing.Point(179, 236)
         Me.loginBtn.Name = "loginBtn"
         Me.loginBtn.Size = New System.Drawing.Size(75, 23)
         Me.loginBtn.TabIndex = 5
         Me.loginBtn.Text = "LOGIN"
-        Me.loginBtn.UseVisualStyleBackColor = True
+        Me.loginBtn.UseVisualStyleBackColor = False
         '
         'passwordTxt
         '
-        Me.passwordTxt.Location = New System.Drawing.Point(191, 146)
+        Me.passwordTxt.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.passwordTxt.BackColor = System.Drawing.Color.White
+        Me.passwordTxt.Location = New System.Drawing.Point(179, 191)
         Me.passwordTxt.Name = "passwordTxt"
-        Me.passwordTxt.Size = New System.Drawing.Size(185, 20)
+        Me.passwordTxt.Size = New System.Drawing.Size(242, 20)
         Me.passwordTxt.TabIndex = 4
         '
         'usernameTxt
         '
-        Me.usernameTxt.Location = New System.Drawing.Point(191, 93)
+        Me.usernameTxt.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.usernameTxt.BackColor = System.Drawing.Color.White
+        Me.usernameTxt.Location = New System.Drawing.Point(179, 129)
         Me.usernameTxt.Name = "usernameTxt"
-        Me.usernameTxt.Size = New System.Drawing.Size(185, 20)
+        Me.usernameTxt.Size = New System.Drawing.Size(242, 20)
         Me.usernameTxt.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(84, 100)
+        Me.Label3.Font = New System.Drawing.Font("Segoe Script", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(29, 119)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 13)
+        Me.Label3.Size = New System.Drawing.Size(124, 34)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Username"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(86, 146)
+        Me.Label2.Font = New System.Drawing.Font("Segoe Script", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label2.Location = New System.Drawing.Point(29, 181)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
+        Me.Label2.Size = New System.Drawing.Size(119, 34)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Password"
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(206, 20)
+        Me.Label1.Font = New System.Drawing.Font("Yellowtail", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.Location = New System.Drawing.Point(174, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(33, 13)
+        Me.Label1.Size = New System.Drawing.Size(174, 81)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Login"
         '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = Global.inputnilai.My.Resources.Resources.smkn1karawang
         Me.PictureBox1.Location = New System.Drawing.Point(3, -4)
         Me.PictureBox1.Name = "PictureBox1"
@@ -138,6 +169,7 @@ Partial Class FLogin
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "FLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

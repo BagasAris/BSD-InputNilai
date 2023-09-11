@@ -6,13 +6,13 @@ Public Class FLogin
             MessageBox.Show("Harap isi username dan password!")
         Else
             Call koneksi()
-            CMD = New MySqlCommand("Select * from guru where username ='" & usernameTxt.Text & "' and password = '" & passwordTxt.Text & "'", CONN)
+            CMD = New MySqlCommand("Select * from wali_kelas where username ='" & usernameTxt.Text & "' and password = '" & passwordTxt.Text & "'", CONN)
             RD = CMD.ExecuteReader
             RD.Read()
-            If RD("id_level").ToString = "1" Then
+            If RD("id").ToString = "2" Then
                 Me.Hide()
                 FMenuAdmin.Show()
-            ElseIf RD("id_level").ToString = "2" Then
+            ElseIf RD("id").ToString = "1" Then
                 Me.Hide()
                 FXIIRPL1.Show()
             End If
@@ -34,5 +34,9 @@ Public Class FLogin
 
     Private Sub batalBtn_Click(sender As Object, e As EventArgs) Handles batalBtn.Click
         Me.Close()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

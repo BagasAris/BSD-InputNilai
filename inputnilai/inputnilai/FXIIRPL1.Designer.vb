@@ -26,12 +26,14 @@ Partial Class FXIIRPL1
         Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataSiswaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NilaiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MataPelajaranToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem, Me.DataSiswaToolStripMenuItem, Me.NilaiToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem, Me.DataSiswaToolStripMenuItem, Me.NilaiToolStripMenuItem, Me.MataPelajaranToolStripMenuItem, Me.LaporanToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -56,6 +58,18 @@ Partial Class FXIIRPL1
         Me.NilaiToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.NilaiToolStripMenuItem.Text = "Nilai"
         '
+        'MataPelajaranToolStripMenuItem
+        '
+        Me.MataPelajaranToolStripMenuItem.Name = "MataPelajaranToolStripMenuItem"
+        Me.MataPelajaranToolStripMenuItem.Size = New System.Drawing.Size(97, 20)
+        Me.MataPelajaranToolStripMenuItem.Text = "Mata Pelajaran"
+        '
+        'LaporanToolStripMenuItem
+        '
+        Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
+        Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.LaporanToolStripMenuItem.Text = "Laporan"
+        '
         'FXIIRPL1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -76,4 +90,6 @@ Partial Class FXIIRPL1
     Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataSiswaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NilaiToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MataPelajaranToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LaporanToolStripMenuItem As ToolStripMenuItem
 End Class

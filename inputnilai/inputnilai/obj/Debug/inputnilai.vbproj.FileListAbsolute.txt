@@ -16,3 +16,6 @@ G:\CODING\BSD\XII\inputnilai\inputnilai\obj\Debug\inputnilai.pdb
 G:\CODING\BSD\XII\inputnilai\inputnilai\obj\Debug\inputnilai.FMenuAdmin.resources
 G:\CODING\BSD\XII\inputnilai\inputnilai\obj\Debug\inputnilai.FXIIRPL1.resources
 G:\CODING\BSD\XII\inputnilai\inputnilai\obj\Debug\inputnilai.FDataSiswa.resources
+G:\CODING\BSD\XII\inputnilai\inputnilai\obj\Debug\inputnilai.FMataPelajaran.resources
+G:\CODING\BSD\XII\inputnilai\inputnilai\obj\Debug\inputnilai.FNilai.resources
+G:\CODING\BSD\XII\inputnilai\inputnilai\obj\Debug\inputnilai.FLaporan.resources

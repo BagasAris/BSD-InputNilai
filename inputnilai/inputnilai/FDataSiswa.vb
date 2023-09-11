@@ -24,10 +24,12 @@ Public Class FDataSiswa
             DGdatasiswa.Columns(1).Width = 130
             DGdatasiswa.Columns(2).Width = 130
             DGdatasiswa.Columns(3).Width = 130
-            DGdatasiswa.Columns(1).HeaderText = "ID"
-            DGdatasiswa.Columns(2).HeaderText = "NAMA"
-            DGdatasiswa.Columns(3).HeaderText = "Kelas"
-            DGdatasiswa.Columns(4).HeaderText = "Jenis Kelamin"
+            DGdatasiswa.Columns(4).Width = 130
+            DGdatasiswa.Columns(0).HeaderText = "ID"
+            DGdatasiswa.Columns(1).HeaderText = "NAMA"
+            DGdatasiswa.Columns(2).HeaderText = "NISN"
+            DGdatasiswa.Columns(3).HeaderText = "JENIS KELAMIN"
+            DGdatasiswa.Columns(4).HeaderText = "KELAS" '
         Catch ex As Exception
         End Try
     End Sub
@@ -37,12 +39,12 @@ Public Class FDataSiswa
         Try
             Dim str As String
             'str = "INSERT INTO tb_petugas (id_petugas, username, password, nama_petugas, id_level) VALUES ('" & idPetugasTxt.Text & "','" & usernameTxt.Text & "', '" & passwordTxt.Text & "', '" & namaTxt.Text & "',' SELECT id_level FROM tb_level WHERE id_level = '" & idTxt.Text & "')"
-            str = "INSERT INTO data_siswa (id, nama, jk, kelas) VALUES ('" & idTxt.Text & "','" & namaTxt.Text & "','" & ComboBox1.Text & "','" & kelasTxt.Text & "')"
+            str = "INSERT INTO data_siswa (id, nama, nisn, jk, kelas) VALUES ('" & idTxt.Text & "','" & namaTxt.Text & "','" & nisnTxt.Text & "','" & ComboBox1.Text & "','" & kelasTxt.Text & "')"
             CMD = New MySql.Data.MySqlClient.MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Insert Data Siswa Berhasil Dilakukan")
         Catch ex As Exception
-            MessageBox.Show("Insert data Siswa gagal dilakukan.")
+            MessageBox.Show("Insert Data Siswa gagal dilakukan.")
         End Try
         Call tampilUser()
         Call aturDGV()
@@ -52,13 +54,13 @@ Public Class FDataSiswa
         Try
             Call koneksi()
             Dim str As String
-            str = "UPDATE data_siswa SET id = '" & idTxt.Text & "', nama = '" & namaTxt.Text & "', jk = '" & ComboBox1.Text & "', kelas = '" & kelasTxt.Text & "' WHERE id = '" & idTxt.Text & "'"
+            str = "UPDATE data_siswa SET id = '" & idTxt.Text & "', nama = '" & namaTxt.Text & "',, nisn = '" & nisnTxt.Text & "' jk = '" & ComboBox1.Text & "', kelas = '" & kelasTxt.Text & "' WHERE id = '" & idTxt.Text & "'"
             CMD = New MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Update Data Siswa Berhasil Dilakukan.")
 
         Catch ex As Exception
-            MessageBox.Show("Update data Siswa gagal dilakukan")
+            MessageBox.Show("Update Data Siswa gagal dilakukan")
         End Try
         Call tampilUser()
         Call aturDGV()
@@ -82,8 +84,9 @@ Public Class FDataSiswa
     Private Sub DGdatasiswa_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGdatasiswa.CellContentClick
         idTxt.Text = DGdatasiswa.Rows(e.RowIndex).Cells(0).Value
         namaTxt.Text = DGdatasiswa.Rows(e.RowIndex).Cells(1).Value
-        ComboBox1.Text = DGdatasiswa.Rows(e.RowIndex).Cells(2).Value
-        kelasTxt.Text = DGdatasiswa.Rows(e.RowIndex).Cells(3).Value
+        nisnTxt.Text = DGdatasiswa.Rows(e.RowIndex).Cells(2).Value
+        ComboBox1.Text = DGdatasiswa.Rows(e.RowIndex).Cells(3).Value
+        kelasTxt.Text = DGdatasiswa.Rows(e.RowIndex).Cells(4).Value
     End Sub
 
     Private Sub tambahBtn_Click(sender As Object, e As EventArgs) Handles tambahBtn.Click

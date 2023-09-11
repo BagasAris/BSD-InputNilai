@@ -81,11 +81,23 @@
     <Compile Include="FDataSiswa.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FLaporan.Designer.vb">
+      <DependentUpon>FLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FLogin.Designer.vb">
       <DependentUpon>FLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMataPelajaran.Designer.vb">
+      <DependentUpon>FMataPelajaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMataPelajaran.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FMenuAdmin.Designer.vb">
@@ -128,11 +140,20 @@
     <EmbeddedResource Include="FDataSiswa.resx">
       <DependentUpon>FDataSiswa.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FLaporan.resx">
+      <DependentUpon>FLaporan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FMataPelajaran.resx">
+      <DependentUpon>FMataPelajaran.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FMenuAdmin.resx">
       <DependentUpon>FMenuAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNilai.resx">
+      <DependentUpon>FNilai.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FXIIRPL1.resx">
       <DependentUpon>FXIIRPL1.vb</DependentUpon>
