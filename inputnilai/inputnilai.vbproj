@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60A88DB7-A0B2-42EE-B013-57040FEBEC73}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>inputnilai.My.MyApplication</StartupObject>
+    <RootNamespace>inputnilai</RootNamespace>
+    <AssemblyName>inputnilai</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>inputnilai.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>inputnilai.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\PBT\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="FDataSiswa.Designer.vb">
+      <DependentUpon>FDataSiswa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FDataSiswa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGuru.Designer.vb">
+      <DependentUpon>FGuru.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FGuru.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FKelas.Designer.vb">
+      <DependentUpon>FKelas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FKelas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLaporan.Designer.vb">
+      <DependentUpon>FLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLevel.Designer.vb">
+      <DependentUpon>FLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.vb">
+      <DependentUpon>FLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMataPelajaran.Designer.vb">
+      <DependentUpon>FMataPelajaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMataPelajaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenuAdmin.Designer.vb">
+      <DependentUpon>FMenuAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMenuAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNilai.Designer.vb">
+      <DependentUpon>FNilai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FNilai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FWaliKelas.Designer.vb">
+      <DependentUpon>FWaliKelas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FWaliKelas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXIIRPL1.Designer.vb">
+      <DependentUpon>FXIIRPL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FXIIRPL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FDataSiswa.resx">
+      <DependentUpon>FDataSiswa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGuru.resx">
+      <DependentUpon>FGuru.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FKelas.resx">
+      <DependentUpon>FKelas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLaporan.resx">
+      <DependentUpon>FLaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLevel.resx">
+      <DependentUpon>FLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMataPelajaran.resx">
+      <DependentUpon>FMataPelajaran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenuAdmin.resx">
+      <DependentUpon>FMenuAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNilai.resx">
+      <DependentUpon>FNilai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FWaliKelas.resx">
+      <DependentUpon>FWaliKelas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXIIRPL1.resx">
+      <DependentUpon>FXIIRPL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smkn1karawang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
