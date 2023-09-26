@@ -4,14 +4,26 @@ Public Class FDataSiswa
     Private Sub FDataSiswa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilUser()
         Call aturDGV()
-        ComboBox1.Items.Add("Laki-Laki")
-        ComboBox1.Items.Add("Perempuan")
+        Call isiComboKelas()
+    End Sub
+
+    Sub isiComboKelas()
+        Call koneksi()
+        Dim query As String = "select nama from kelas"
+        CMD = New MySqlCommand(query, CONN)
+        RD = CMD.ExecuteReader()
+        While RD.Read()
+            Dim namaKelas As String = RD("nama").ToString()
+            kelas.Items.Add(namaKelas)
+        End While
     End Sub
 
     Sub tampilUser()
 
         Call koneksi()
-        DA = New MySql.Data.MySqlClient.MySqlDataAdapter("select * from data_siswa", CONN)
+        DA = New MySqlDataAdapter("SELECT data_siswa.id, data_siswa.nama, data_siswa.nisn, data_siswa.jk, kelas.nama " &
+    "FROM data_siswa " &
+    "INNER JOIN kelas ON data_siswa.id_kelas = kelas.id_kelas", CONN)
         DS = New DataSet
         DA.Fill(DS, "data_siswa")
         DGdatasiswa.DataSource = DS.Tables("data_siswa")
@@ -29,7 +41,7 @@ Public Class FDataSiswa
             DGdatasiswa.Columns(1).HeaderText = "NAMA"
             DGdatasiswa.Columns(2).HeaderText = "NISN"
             DGdatasiswa.Columns(3).HeaderText = "JENIS KELAMIN"
-            DGdatasiswa.Columns(4).HeaderText = "KELAS" '
+            DGdatasiswa.Columns(4).HeaderText = "KELAS"
         Catch ex As Exception
         End Try
     End Sub
@@ -39,7 +51,7 @@ Public Class FDataSiswa
         Try
             Dim str As String
             'str = "INSERT INTO tb_petugas (id_petugas, username, password, nama_petugas, id_level) VALUES ('" & idPetugasTxt.Text & "','" & usernameTxt.Text & "', '" & passwordTxt.Text & "', '" & namaTxt.Text & "',' SELECT id_level FROM tb_level WHERE id_level = '" & idTxt.Text & "')"
-            str = "INSERT INTO data_siswa (id, nama, nisn, jk, kelas) VALUES ('" & idTxt.Text & "','" & namaTxt.Text & "','" & nisnTxt.Text & "','" & ComboBox1.Text & "','" & kelasTxt.Text & "')"
+            str = "INSERT INTO data_siswa (id, nama, nisn, jk, id_kelas) VALUES ('" & idTxt.Text & "','" & namaTxt.Text & "','" & nisnTxt.Text & "','" & ComboBox1.Text & "',(Select id_kelas from kelas where nama='" & kelas.Text & "'))"
             CMD = New MySql.Data.MySqlClient.MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Insert Data Siswa Berhasil Dilakukan")
@@ -54,7 +66,7 @@ Public Class FDataSiswa
         Try
             Call koneksi()
             Dim str As String
-            str = "UPDATE data_siswa SET id = '" & idTxt.Text & "', nama = '" & namaTxt.Text & "',, nisn = '" & nisnTxt.Text & "' jk = '" & ComboBox1.Text & "', kelas = '" & kelasTxt.Text & "' WHERE id = '" & idTxt.Text & "'"
+            str = "UPDATE data_siswa SET id = '" & idTxt.Text & "', nama = '" & namaTxt.Text & "', nisn = '" & nisnTxt.Text & "', jk = '" & ComboBox1.Text & "', id_kelas = (Select id_kelas from kelas where nama='" & kelas.Text & "') WHERE id = '" & idTxt.Text & "'"
             CMD = New MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Update Data Siswa Berhasil Dilakukan.")
@@ -86,7 +98,7 @@ Public Class FDataSiswa
         namaTxt.Text = DGdatasiswa.Rows(e.RowIndex).Cells(1).Value
         nisnTxt.Text = DGdatasiswa.Rows(e.RowIndex).Cells(2).Value
         ComboBox1.Text = DGdatasiswa.Rows(e.RowIndex).Cells(3).Value
-        kelasTxt.Text = DGdatasiswa.Rows(e.RowIndex).Cells(4).Value
+        kelas.Text = DGdatasiswa.Rows(e.RowIndex).Cells(4).Value
     End Sub
 
     Private Sub tambahBtn_Click(sender As Object, e As EventArgs) Handles tambahBtn.Click

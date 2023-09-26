@@ -27,9 +27,9 @@ Partial Class FMenuAdmin
         Me.MasterDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuruToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WaliKelasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KelasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LevelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.KelasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,14 +60,20 @@ Partial Class FMenuAdmin
         'GuruToolStripMenuItem
         '
         Me.GuruToolStripMenuItem.Name = "GuruToolStripMenuItem"
-        Me.GuruToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GuruToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.GuruToolStripMenuItem.Text = "Guru"
         '
         'WaliKelasToolStripMenuItem
         '
         Me.WaliKelasToolStripMenuItem.Name = "WaliKelasToolStripMenuItem"
-        Me.WaliKelasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.WaliKelasToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.WaliKelasToolStripMenuItem.Text = "Wali Kelas"
+        '
+        'KelasToolStripMenuItem
+        '
+        Me.KelasToolStripMenuItem.Name = "KelasToolStripMenuItem"
+        Me.KelasToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.KelasToolStripMenuItem.Text = "Kelas"
         '
         'StatusToolStripMenuItem
         '
@@ -79,14 +85,8 @@ Partial Class FMenuAdmin
         'LevelToolStripMenuItem
         '
         Me.LevelToolStripMenuItem.Name = "LevelToolStripMenuItem"
-        Me.LevelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LevelToolStripMenuItem.Size = New System.Drawing.Size(101, 22)
         Me.LevelToolStripMenuItem.Text = "Level"
-        '
-        'KelasToolStripMenuItem
-        '
-        Me.KelasToolStripMenuItem.Name = "KelasToolStripMenuItem"
-        Me.KelasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.KelasToolStripMenuItem.Text = "Kelas"
         '
         'FMenuAdmin
         '

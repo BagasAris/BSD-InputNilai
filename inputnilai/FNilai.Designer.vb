@@ -28,14 +28,12 @@ Partial Class FNilai
         Me.editBtn = New System.Windows.Forms.Button()
         Me.tambahBtn = New System.Windows.Forms.Button()
         Me.cariTxt = New System.Windows.Forms.TextBox()
-        Me.namaTxt = New System.Windows.Forms.TextBox()
         Me.idTxt = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGnilai = New System.Windows.Forms.DataGridView()
-        Me.namaSiswaTxt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.uts1Txt = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -46,6 +44,8 @@ Partial Class FNilai
         Me.uas2Txt = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.mapel = New System.Windows.Forms.ComboBox()
+        Me.siswa = New System.Windows.Forms.ComboBox()
         CType(Me.DGnilai, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -102,13 +102,6 @@ Partial Class FNilai
         Me.cariTxt.Size = New System.Drawing.Size(168, 20)
         Me.cariTxt.TabIndex = 39
         '
-        'namaTxt
-        '
-        Me.namaTxt.Location = New System.Drawing.Point(141, 84)
-        Me.namaTxt.Name = "namaTxt"
-        Me.namaTxt.Size = New System.Drawing.Size(249, 20)
-        Me.namaTxt.TabIndex = 38
-        '
         'idTxt
         '
         Me.idTxt.Location = New System.Drawing.Point(141, 43)
@@ -159,13 +152,6 @@ Partial Class FNilai
         Me.DGnilai.Name = "DGnilai"
         Me.DGnilai.Size = New System.Drawing.Size(752, 184)
         Me.DGnilai.TabIndex = 32
-        '
-        'namaSiswaTxt
-        '
-        Me.namaSiswaTxt.Location = New System.Drawing.Point(523, 40)
-        Me.namaSiswaTxt.Name = "namaSiswaTxt"
-        Me.namaSiswaTxt.Size = New System.Drawing.Size(249, 20)
-        Me.namaSiswaTxt.TabIndex = 46
         '
         'Label2
         '
@@ -248,11 +234,29 @@ Partial Class FNilai
         Me.Label10.Size = New System.Drawing.Size(0, 13)
         Me.Label10.TabIndex = 55
         '
+        'mapel
+        '
+        Me.mapel.FormattingEnabled = True
+        Me.mapel.Location = New System.Drawing.Point(141, 84)
+        Me.mapel.Name = "mapel"
+        Me.mapel.Size = New System.Drawing.Size(249, 21)
+        Me.mapel.TabIndex = 56
+        '
+        'siswa
+        '
+        Me.siswa.FormattingEnabled = True
+        Me.siswa.Location = New System.Drawing.Point(523, 40)
+        Me.siswa.Name = "siswa"
+        Me.siswa.Size = New System.Drawing.Size(249, 21)
+        Me.siswa.TabIndex = 57
+        '
         'FNilai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.siswa)
+        Me.Controls.Add(Me.mapel)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.uas2Txt)
         Me.Controls.Add(Me.Label9)
@@ -262,7 +266,6 @@ Partial Class FNilai
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.uts1Txt)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.namaSiswaTxt)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cariBtn)
         Me.Controls.Add(Me.keluarBtn)
@@ -270,7 +273,6 @@ Partial Class FNilai
         Me.Controls.Add(Me.editBtn)
         Me.Controls.Add(Me.tambahBtn)
         Me.Controls.Add(Me.cariTxt)
-        Me.Controls.Add(Me.namaTxt)
         Me.Controls.Add(Me.idTxt)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -291,14 +293,12 @@ Partial Class FNilai
     Friend WithEvents editBtn As Button
     Friend WithEvents tambahBtn As Button
     Friend WithEvents cariTxt As TextBox
-    Friend WithEvents namaTxt As TextBox
     Friend WithEvents idTxt As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DGnilai As DataGridView
-    Friend WithEvents namaSiswaTxt As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents uts1Txt As TextBox
     Friend WithEvents Label6 As Label
@@ -309,4 +309,6 @@ Partial Class FNilai
     Friend WithEvents uas2Txt As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents mapel As ComboBox
+    Friend WithEvents siswa As ComboBox
 End Class

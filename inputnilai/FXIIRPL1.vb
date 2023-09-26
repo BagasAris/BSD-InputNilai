@@ -19,4 +19,8 @@
     Private Sub LaporanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LaporanToolStripMenuItem.Click
         FLaporan.Show()
     End Sub
+
+    Private Sub FXIIRPL1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

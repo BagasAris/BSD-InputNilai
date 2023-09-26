@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FLogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,16 +20,16 @@ Partial Class FLogin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.login1Btn = New Guna.UI.WinForms.GunaButton()
+        Me.ShowBtn = New System.Windows.Forms.Button()
         Me.passwordTxt = New System.Windows.Forms.TextBox()
         Me.usernameTxt = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ShowBtn = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,6 +77,24 @@ Partial Class FLogin
         Me.login1Btn.TabIndex = 8
         Me.login1Btn.Text = "Login"
         Me.login1Btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ShowBtn
+        '
+        Me.ShowBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ShowBtn.BackColor = System.Drawing.Color.Transparent
+        Me.ShowBtn.BackgroundImage = Global.inputnilai.My.Resources.Resources.show
+        Me.ShowBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ShowBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ShowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ShowBtn.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ShowBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.ShowBtn.ImageKey = "(none)"
+        Me.ShowBtn.Location = New System.Drawing.Point(436, 182)
+        Me.ShowBtn.Name = "ShowBtn"
+        Me.ShowBtn.Size = New System.Drawing.Size(38, 36)
+        Me.ShowBtn.TabIndex = 7
+        Me.ShowBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ShowBtn.UseVisualStyleBackColor = False
         '
         'passwordTxt
         '
@@ -129,24 +147,6 @@ Partial Class FLogin
         Me.Label1.Size = New System.Drawing.Size(312, 75)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Login"
-        '
-        'ShowBtn
-        '
-        Me.ShowBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ShowBtn.BackColor = System.Drawing.Color.Transparent
-        Me.ShowBtn.BackgroundImage = Global.inputnilai.My.Resources.Resources.show
-        Me.ShowBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ShowBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ShowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ShowBtn.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ShowBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ShowBtn.ImageKey = "(none)"
-        Me.ShowBtn.Location = New System.Drawing.Point(436, 182)
-        Me.ShowBtn.Name = "ShowBtn"
-        Me.ShowBtn.Size = New System.Drawing.Size(38, 36)
-        Me.ShowBtn.TabIndex = 7
-        Me.ShowBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ShowBtn.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '

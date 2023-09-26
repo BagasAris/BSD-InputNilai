@@ -30,7 +30,6 @@ Partial Class FDataSiswa
         Me.Label5 = New System.Windows.Forms.Label()
         Me.idTxt = New System.Windows.Forms.TextBox()
         Me.namaTxt = New System.Windows.Forms.TextBox()
-        Me.kelasTxt = New System.Windows.Forms.TextBox()
         Me.cariTxt = New System.Windows.Forms.TextBox()
         Me.tambahBtn = New System.Windows.Forms.Button()
         Me.editBtn = New System.Windows.Forms.Button()
@@ -41,6 +40,7 @@ Partial Class FDataSiswa
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.nisnTxt = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.kelas = New System.Windows.Forms.ComboBox()
         CType(Me.DGdatasiswa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,7 +64,7 @@ Partial Class FDataSiswa
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(424, 91)
+        Me.Label2.Location = New System.Drawing.Point(424, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(33, 13)
         Me.Label2.TabIndex = 2
@@ -110,13 +110,6 @@ Partial Class FDataSiswa
         Me.namaTxt.Name = "namaTxt"
         Me.namaTxt.Size = New System.Drawing.Size(285, 20)
         Me.namaTxt.TabIndex = 7
-        '
-        'kelasTxt
-        '
-        Me.kelasTxt.Location = New System.Drawing.Point(503, 84)
-        Me.kelasTxt.Name = "kelasTxt"
-        Me.kelasTxt.Size = New System.Drawing.Size(285, 20)
-        Me.kelasTxt.TabIndex = 8
         '
         'cariTxt
         '
@@ -183,6 +176,7 @@ Partial Class FDataSiswa
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
         Me.ComboBox1.Location = New System.Drawing.Point(503, 47)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(285, 21)
@@ -204,11 +198,20 @@ Partial Class FDataSiswa
         Me.Label7.TabIndex = 17
         Me.Label7.Text = "Nisn"
         '
+        'kelas
+        '
+        Me.kelas.FormattingEnabled = True
+        Me.kelas.Location = New System.Drawing.Point(503, 87)
+        Me.kelas.Name = "kelas"
+        Me.kelas.Size = New System.Drawing.Size(285, 21)
+        Me.kelas.TabIndex = 19
+        '
         'FDataSiswa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.kelas)
         Me.Controls.Add(Me.nisnTxt)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.ComboBox1)
@@ -219,7 +222,6 @@ Partial Class FDataSiswa
         Me.Controls.Add(Me.editBtn)
         Me.Controls.Add(Me.tambahBtn)
         Me.Controls.Add(Me.cariTxt)
-        Me.Controls.Add(Me.kelasTxt)
         Me.Controls.Add(Me.namaTxt)
         Me.Controls.Add(Me.idTxt)
         Me.Controls.Add(Me.Label5)
@@ -244,7 +246,6 @@ Partial Class FDataSiswa
     Friend WithEvents Label5 As Label
     Friend WithEvents idTxt As TextBox
     Friend WithEvents namaTxt As TextBox
-    Friend WithEvents kelasTxt As TextBox
     Friend WithEvents cariTxt As TextBox
     Friend WithEvents tambahBtn As Button
     Friend WithEvents editBtn As Button
@@ -255,4 +256,5 @@ Partial Class FDataSiswa
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents nisnTxt As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents kelas As ComboBox
 End Class

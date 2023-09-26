@@ -11,7 +11,9 @@ Public Class FMataPelajaran
     Sub tampilUser()
 
         Call koneksi()
-        DA = New MySqlDataAdapter("SELECT mata_pelajaran.id, mata_pelajaran.nama, guru.nama " & "FROM mata_pelajaran " & "INNER JOIN guru ON mata_pelajaran.id = guru.id ", CONN)
+        DA = New MySqlDataAdapter("SELECT mata_pelajaran.id_mapel, mata_pelajaran.nama, guru.nama " &
+                                  "FROM mata_pelajaran " &
+                                  "INNER JOIN guru ON mata_pelajaran.id_guru = guru.id", CONN)
         DS = New DataSet
         DA.Fill(DS, "mata_pelajaran")
         DGmapel.DataSource = DS.Tables("mata_pelajaran")
@@ -45,8 +47,7 @@ Public Class FMataPelajaran
         Call koneksi()
         Try
             Dim str As String
-            'str = "INSERT INTO tb_petugas (id_petugas, username, password, nama_petugas, id_level) VALUES ('" & idPetugasTxt.Text & "','" & usernameTxt.Text & "', '" & passwordTxt.Text & "', '" & namaTxt.Text & "',' SELECT id_level FROM tb_level WHERE id_level = '" & idTxt.Text & "')"
-            str = "INSERT INTO mata_pelajaran (id, nama, id_guru) VALUES ('" & idTxt.Text & "','" & namaTxt.Text & "', (Select id from guru where nama='" & ComboBox1.Text & "'))"
+            str = "INSERT INTO mata_pelajaran (id_mapel, nama, id_guru) VALUES ('" & idTxt.Text & "','" & namaTxt.Text & "', (Select id from guru where nama='" & ComboBox1.Text & "'))"
             CMD = New MySql.Data.MySqlClient.MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Insert Data Mata Pelajaran Berhasil Dilakukan")
@@ -61,7 +62,7 @@ Public Class FMataPelajaran
         Try
             Call koneksi()
             Dim str As String
-            str = "UPDATE mata_pelajaran SET id = '" & idTxt.Text & "', nama = '" & namaTxt.Text & "', id = (Select id from guru where nama='" & ComboBox1.Text & "') WHERE id = '" & idTxt.Text & "'"
+            str = "UPDATE mata_pelajaran SET id_mapel = '" & idTxt.Text & "', nama = '" & namaTxt.Text & "', id_guru = (Select id from guru where nama='" & ComboBox1.Text & "') WHERE id_mapel = '" & idTxt.Text & "'"
             CMD = New MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Update Data Mata Pelajaran Berhasil Dilakukan.")

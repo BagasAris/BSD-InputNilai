@@ -33,6 +33,7 @@ Partial Class FXIIRPL1
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem, Me.DataSiswaToolStripMenuItem, Me.NilaiToolStripMenuItem, Me.MataPelajaranToolStripMenuItem, Me.LaporanToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"

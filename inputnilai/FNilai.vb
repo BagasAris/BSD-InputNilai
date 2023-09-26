@@ -5,12 +5,39 @@ Public Class FNilai
     Private Sub FNilai_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilUser()
         Call aturDGV()
+        Call isiComboMapel()
+        Call isiComboNama()
+    End Sub
+
+    Sub isiComboMapel()
+        Call koneksi()
+        Dim query As String = "select nama from mata_pelajaran"
+        CMD = New MySqlCommand(query, CONN)
+        RD = CMD.ExecuteReader()
+        While RD.Read()
+            Dim namaMapel As String = RD("nama").ToString()
+            mapel.Items.Add(namaMapel)
+        End While
+    End Sub
+
+    Sub isiComboNama()
+        Call koneksi()
+        Dim query As String = "select nama from data_siswa"
+        CMD = New MySqlCommand(query, CONN)
+        RD = CMD.ExecuteReader()
+        While RD.Read()
+            Dim namaSiswa As String = RD("nama").ToString()
+            siswa.Items.Add(namaSiswa)
+        End While
     End Sub
 
     Sub tampilUser()
 
         Call koneksi()
-        DA = New MySql.Data.MySqlClient.MySqlDataAdapter("select * from nilai", CONN)
+        DA = New MySqlDataAdapter("SELECT nilai.id_nilai, mata_pelajaran.nama, data_siswa.nama, nilai.uts1, nilai.uts2, nilai.uas1, nilai.uas2 " &
+    "FROM nilai " &
+    "INNER JOIN mata_pelajaran ON nilai.mata_pelajaran = mata_pelajaran.id_mapel " &
+    "INNER JOIN data_siswa ON nilai.nama_siswa = data_siswa.id_siswa", CONN)
         DS = New DataSet
         DA.Fill(DS, "nilai")
         DGnilai.DataSource = DS.Tables("nilai")
@@ -41,8 +68,7 @@ Public Class FNilai
         Call koneksi()
         Try
             Dim str As String
-            'str = "INSERT INTO tb_petugas (id_petugas, username, password, nama_petugas, id_level) VALUES ('" & idPetugasTxt.Text & "','" & usernameTxt.Text & "', '" & passwordTxt.Text & "', '" & namaTxt.Text & "',' SELECT id_level FROM tb_level WHERE id_level = '" & idTxt.Text & "')"
-            str = "INSERT INTO nilai (id, mata_pelajaran, nama_siswa, uts1, uts2, uas1, uas2) VALUES ('" & idTxt.Text & "','" & namaTxt.Text & "','" & namaSiswaTxt.Text & "','" & uts1Txt.Text & "','" & uts2Txt.Text & "','" & uas1Txt.Text & "','" & uas2Txt.Text & "')"
+            str = "INSERT INTO nilai (id_nilai, mata_pelajaran, nama_siswa, uts1, uts2, uas1, uas2) VALUES ('" & idTxt.Text & "', (Select id_mapel from mata_pelajaran where nama='" & mapel.Text & "'), (Select id_siswa from data_siswa where nama='" & siswa.Text & "'),'" & uts1Txt.Text & "','" & uts2Txt.Text & "','" & uas1Txt.Text & "','" & uas2Txt.Text & "')"
             CMD = New MySql.Data.MySqlClient.MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Insert Data Nilai Siswa Berhasil Dilakukan")
@@ -57,7 +83,7 @@ Public Class FNilai
         Try
             Call koneksi()
             Dim str As String
-            str = "UPDATE nilai SET id = '" & idTxt.Text & "', mata_pelajaran = '" & namaTxt.Text & "', nama_siswa = '" & namaSiswaTxt.Text & "', uts1 = '" & uts1Txt.Text & "', uts2 = '" & uts2Txt.Text & "', uas1 = '" & uas1Txt.Text & "', uas2 = '" & uas2Txt.Text & "' WHERE id = '" & idTxt.Text & "'"
+            str = "UPDATE nilai SET id_nilai = '" & idTxt.Text & "', mata_pelajaran = (Select id_mapel from mata_pelajaran where nama='" & mapel.Text & "'), nama_siswa = (Select id_siswa from data_siswa where nama='" & siswa.Text & "'), uts1 = '" & uts1Txt.Text & "', uts2 = '" & uts2Txt.Text & "', uas1 = '" & uas1Txt.Text & "', uas2 = '" & uas2Txt.Text & "' WHERE id_nilai = '" & idTxt.Text & "'"
             CMD = New MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Update Data Nilai Siswa Berhasil Dilakukan.")
@@ -72,7 +98,7 @@ Public Class FNilai
         Try
             Call koneksi()
             Dim str As String
-            str = "delete from nilai where id = '" & idTxt.Text & "'"
+            str = "delete from nilai where id_nilai = '" & idTxt.Text & "'"
             CMD = New MySql.Data.MySqlClient.MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Data Nilai Siswa Berhasil Dihapus.")
@@ -86,8 +112,8 @@ Public Class FNilai
 
     Private Sub DGnilai_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGnilai.CellContentClick
         idTxt.Text = DGnilai.Rows(e.RowIndex).Cells(0).Value
-        namaTxt.Text = DGnilai.Rows(e.RowIndex).Cells(1).Value
-        namaSiswaTxt.Text = DGnilai.Rows(e.RowIndex).Cells(2).Value
+        siswa.Text = DGnilai.Rows(e.RowIndex).Cells(1).Value
+        mapel.Text = DGnilai.Rows(e.RowIndex).Cells(2).Value
         uts1Txt.Text = DGnilai.Rows(e.RowIndex).Cells(3).Value
         uts2Txt.Text = DGnilai.Rows(e.RowIndex).Cells(4).Value
         uas1Txt.Text = DGnilai.Rows(e.RowIndex).Cells(5).Value
