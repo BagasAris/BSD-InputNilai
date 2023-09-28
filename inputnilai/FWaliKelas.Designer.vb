@@ -30,7 +30,6 @@ Partial Class FWaliKelas
         Me.editBtn = New System.Windows.Forms.Button()
         Me.tambahBtn = New System.Windows.Forms.Button()
         Me.cariTxt = New System.Windows.Forms.TextBox()
-        Me.namaTxt = New System.Windows.Forms.TextBox()
         Me.idTxt = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -38,9 +37,12 @@ Partial Class FWaliKelas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGdatawalikelas = New System.Windows.Forms.DataGridView()
-        Me.kelas = New System.Windows.Forms.ComboBox()
         Me.usernameTxt = New System.Windows.Forms.TextBox()
         Me.passwordTxt = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.guru = New Guna.UI.WinForms.GunaComboBox()
+        Me.kelas = New Guna.UI.WinForms.GunaComboBox()
+        Me.jurusan = New System.Windows.Forms.TextBox()
         CType(Me.DGdatawalikelas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -56,7 +58,7 @@ Partial Class FWaliKelas
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(415, 73)
+        Me.Label6.Location = New System.Drawing.Point(418, 105)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(55, 13)
         Me.Label6.TabIndex = 53
@@ -115,13 +117,6 @@ Partial Class FWaliKelas
         Me.cariTxt.Size = New System.Drawing.Size(207, 20)
         Me.cariTxt.TabIndex = 47
         '
-        'namaTxt
-        '
-        Me.namaTxt.Location = New System.Drawing.Point(103, 102)
-        Me.namaTxt.Name = "namaTxt"
-        Me.namaTxt.Size = New System.Drawing.Size(285, 20)
-        Me.namaTxt.TabIndex = 46
-        '
         'idTxt
         '
         Me.idTxt.Location = New System.Drawing.Point(103, 70)
@@ -159,7 +154,7 @@ Partial Class FWaliKelas
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(415, 109)
+        Me.Label2.Location = New System.Drawing.Point(418, 141)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 41
@@ -182,36 +177,83 @@ Partial Class FWaliKelas
         Me.DGdatawalikelas.Size = New System.Drawing.Size(752, 206)
         Me.DGdatawalikelas.TabIndex = 39
         '
-        'kelas
-        '
-        Me.kelas.FormattingEnabled = True
-        Me.kelas.Location = New System.Drawing.Point(103, 141)
-        Me.kelas.Name = "kelas"
-        Me.kelas.Size = New System.Drawing.Size(285, 21)
-        Me.kelas.TabIndex = 58
-        '
         'usernameTxt
         '
-        Me.usernameTxt.Location = New System.Drawing.Point(491, 70)
+        Me.usernameTxt.Location = New System.Drawing.Point(494, 102)
         Me.usernameTxt.Name = "usernameTxt"
         Me.usernameTxt.Size = New System.Drawing.Size(285, 20)
         Me.usernameTxt.TabIndex = 59
         '
         'passwordTxt
         '
-        Me.passwordTxt.Location = New System.Drawing.Point(491, 109)
+        Me.passwordTxt.Location = New System.Drawing.Point(494, 141)
         Me.passwordTxt.Name = "passwordTxt"
         Me.passwordTxt.Size = New System.Drawing.Size(285, 20)
         Me.passwordTxt.TabIndex = 60
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(418, 73)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(44, 13)
+        Me.Label8.TabIndex = 61
+        Me.Label8.Text = "Jurusan"
+        '
+        'guru
+        '
+        Me.guru.BackColor = System.Drawing.Color.Transparent
+        Me.guru.BaseColor = System.Drawing.Color.White
+        Me.guru.BorderColor = System.Drawing.Color.Silver
+        Me.guru.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.guru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.guru.FocusedColor = System.Drawing.Color.Empty
+        Me.guru.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.guru.ForeColor = System.Drawing.Color.Black
+        Me.guru.FormattingEnabled = True
+        Me.guru.Location = New System.Drawing.Point(103, 99)
+        Me.guru.Name = "guru"
+        Me.guru.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.guru.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.guru.Size = New System.Drawing.Size(285, 26)
+        Me.guru.TabIndex = 63
+        '
+        'kelas
+        '
+        Me.kelas.BackColor = System.Drawing.Color.Transparent
+        Me.kelas.BaseColor = System.Drawing.Color.White
+        Me.kelas.BorderColor = System.Drawing.Color.Silver
+        Me.kelas.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.kelas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.kelas.FocusedColor = System.Drawing.Color.Empty
+        Me.kelas.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.kelas.ForeColor = System.Drawing.Color.Black
+        Me.kelas.FormattingEnabled = True
+        Me.kelas.Location = New System.Drawing.Point(103, 135)
+        Me.kelas.Name = "kelas"
+        Me.kelas.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.kelas.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.kelas.Size = New System.Drawing.Size(285, 26)
+        Me.kelas.TabIndex = 64
+        '
+        'jurusan
+        '
+        Me.jurusan.Location = New System.Drawing.Point(491, 70)
+        Me.jurusan.Name = "jurusan"
+        Me.jurusan.Size = New System.Drawing.Size(285, 20)
+        Me.jurusan.TabIndex = 65
         '
         'FWaliKelas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.jurusan)
+        Me.Controls.Add(Me.kelas)
+        Me.Controls.Add(Me.guru)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.passwordTxt)
         Me.Controls.Add(Me.usernameTxt)
-        Me.Controls.Add(Me.kelas)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cariBtn)
@@ -220,7 +262,6 @@ Partial Class FWaliKelas
         Me.Controls.Add(Me.editBtn)
         Me.Controls.Add(Me.tambahBtn)
         Me.Controls.Add(Me.cariTxt)
-        Me.Controls.Add(Me.namaTxt)
         Me.Controls.Add(Me.idTxt)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -243,7 +284,6 @@ Partial Class FWaliKelas
     Friend WithEvents editBtn As Button
     Friend WithEvents tambahBtn As Button
     Friend WithEvents cariTxt As TextBox
-    Friend WithEvents namaTxt As TextBox
     Friend WithEvents idTxt As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
@@ -251,7 +291,10 @@ Partial Class FWaliKelas
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DGdatawalikelas As DataGridView
-    Friend WithEvents kelas As ComboBox
     Friend WithEvents usernameTxt As TextBox
     Friend WithEvents passwordTxt As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents guru As Guna.UI.WinForms.GunaComboBox
+    Friend WithEvents kelas As Guna.UI.WinForms.GunaComboBox
+    Friend WithEvents jurusan As TextBox
 End Class

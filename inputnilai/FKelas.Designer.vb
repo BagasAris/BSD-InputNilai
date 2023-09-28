@@ -97,7 +97,7 @@ Partial Class FKelas
         '
         'namaTxt
         '
-        Me.namaTxt.Location = New System.Drawing.Point(491, 65)
+        Me.namaTxt.Location = New System.Drawing.Point(494, 65)
         Me.namaTxt.Name = "namaTxt"
         Me.namaTxt.Size = New System.Drawing.Size(285, 20)
         Me.namaTxt.TabIndex = 59
@@ -130,7 +130,7 @@ Partial Class FKelas
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(412, 68)
+        Me.Label3.Location = New System.Drawing.Point(415, 68)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(35, 13)
         Me.Label3.TabIndex = 55
@@ -155,7 +155,7 @@ Partial Class FKelas
         '
         'generasiTxt
         '
-        Me.generasiTxt.Location = New System.Drawing.Point(103, 102)
+        Me.generasiTxt.Location = New System.Drawing.Point(494, 106)
         Me.generasiTxt.Name = "generasiTxt"
         Me.generasiTxt.Size = New System.Drawing.Size(285, 20)
         Me.generasiTxt.TabIndex = 67
@@ -163,7 +163,7 @@ Partial Class FKelas
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(24, 105)
+        Me.Label2.Location = New System.Drawing.Point(415, 109)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(49, 13)
         Me.Label2.TabIndex = 66
@@ -172,7 +172,7 @@ Partial Class FKelas
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(412, 105)
+        Me.Label6.Location = New System.Drawing.Point(24, 105)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(44, 13)
         Me.Label6.TabIndex = 68
@@ -182,7 +182,7 @@ Partial Class FKelas
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Pengembangan Perangkat Lunak dan Gim", "Desain Gambar Mesin", "Desain Pemodelan Informasi Bangunan", "Teknik Komputer Jaringan", "Teknik Kendaraan Ringan Otomotif", "Teknik Bisnis Sepeda Motor", "Teknik Instalasi Tenaga Listrik", "Teknik Elektronika Industri", "Teknik Mesin", "Teknik Pengelasan", "Teknik Fabrika Logam dan Manufactur"})
-        Me.ComboBox1.Location = New System.Drawing.Point(491, 105)
+        Me.ComboBox1.Location = New System.Drawing.Point(103, 105)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(285, 21)
         Me.ComboBox1.TabIndex = 69

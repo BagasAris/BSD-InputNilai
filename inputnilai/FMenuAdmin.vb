@@ -3,7 +3,15 @@
         FGuru.Show()
     End Sub
 
-    Private Sub FMenuAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub WaliKelasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WaliKelasToolStripMenuItem.Click
+        FWaliKelas.Show()
+    End Sub
 
+    Private Sub KelasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KelasToolStripMenuItem.Click
+        FKelas.Show()
+    End Sub
+
+    Private Sub LevelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LevelToolStripMenuItem.Click
+        FLevel.Show()
     End Sub
 End Class

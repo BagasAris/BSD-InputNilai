@@ -28,13 +28,13 @@ Partial Class FLevel
         Me.editBtn = New System.Windows.Forms.Button()
         Me.tambahBtn = New System.Windows.Forms.Button()
         Me.cariTxt = New System.Windows.Forms.TextBox()
-        Me.namaTxt = New System.Windows.Forms.TextBox()
         Me.idTxt = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGdatalevel = New System.Windows.Forms.DataGridView()
+        Me.GunaComboBox1 = New Guna.UI.WinForms.GunaComboBox()
         CType(Me.DGdatalevel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -91,13 +91,6 @@ Partial Class FLevel
         Me.cariTxt.Size = New System.Drawing.Size(207, 20)
         Me.cariTxt.TabIndex = 47
         '
-        'namaTxt
-        '
-        Me.namaTxt.Location = New System.Drawing.Point(491, 70)
-        Me.namaTxt.Name = "namaTxt"
-        Me.namaTxt.Size = New System.Drawing.Size(285, 20)
-        Me.namaTxt.TabIndex = 46
-        '
         'idTxt
         '
         Me.idTxt.Location = New System.Drawing.Point(103, 70)
@@ -128,9 +121,9 @@ Partial Class FLevel
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(412, 73)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(35, 13)
+        Me.Label3.Size = New System.Drawing.Size(64, 13)
         Me.Label3.TabIndex = 42
-        Me.Label3.Text = "Nama"
+        Me.Label3.Text = "Nama Level"
         '
         'Label1
         '
@@ -149,18 +142,37 @@ Partial Class FLevel
         Me.DGdatalevel.Size = New System.Drawing.Size(752, 206)
         Me.DGdatalevel.TabIndex = 39
         '
+        'GunaComboBox1
+        '
+        Me.GunaComboBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaComboBox1.BaseColor = System.Drawing.Color.White
+        Me.GunaComboBox1.BorderColor = System.Drawing.Color.Silver
+        Me.GunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.GunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.GunaComboBox1.FocusedColor = System.Drawing.Color.Empty
+        Me.GunaComboBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.GunaComboBox1.ForeColor = System.Drawing.Color.Black
+        Me.GunaComboBox1.FormattingEnabled = True
+        Me.GunaComboBox1.Items.AddRange(New Object() {"Admin", "Guru"})
+        Me.GunaComboBox1.Location = New System.Drawing.Point(527, 70)
+        Me.GunaComboBox1.Name = "GunaComboBox1"
+        Me.GunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.GunaComboBox1.Size = New System.Drawing.Size(252, 26)
+        Me.GunaComboBox1.TabIndex = 53
+        '
         'FLevel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.GunaComboBox1)
         Me.Controls.Add(Me.cariBtn)
         Me.Controls.Add(Me.keluarBtn)
         Me.Controls.Add(Me.hapusBtn)
         Me.Controls.Add(Me.editBtn)
         Me.Controls.Add(Me.tambahBtn)
         Me.Controls.Add(Me.cariTxt)
-        Me.Controls.Add(Me.namaTxt)
         Me.Controls.Add(Me.idTxt)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -180,11 +192,11 @@ Partial Class FLevel
     Friend WithEvents editBtn As Button
     Friend WithEvents tambahBtn As Button
     Friend WithEvents cariTxt As TextBox
-    Friend WithEvents namaTxt As TextBox
     Friend WithEvents idTxt As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DGdatalevel As DataGridView
+    Friend WithEvents GunaComboBox1 As Guna.UI.WinForms.GunaComboBox
 End Class
