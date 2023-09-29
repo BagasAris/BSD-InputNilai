@@ -34,8 +34,8 @@ Public Class FMataPelajaran
     Sub aturDGV()
         Try
             DGmapel.Columns(0).Width = 70
-            DGmapel.Columns(1).Width = 130
-            DGmapel.Columns(2).Width = 130
+            DGmapel.Columns(1).Width = 210
+            DGmapel.Columns(2).Width = 210
             DGmapel.Columns(0).HeaderText = "ID"
             DGmapel.Columns(1).HeaderText = "NAMA MATA PELAJARAN"
             DGmapel.Columns(2).HeaderText = "NAMA GURU"

@@ -7,7 +7,7 @@
         FNilai.Show()
     End Sub
 
-    Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
+    Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Hide()
         FLogin.Show()
     End Sub
@@ -22,5 +22,10 @@
 
     Private Sub FXIIRPL1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub LogOut_Click(sender As Object, e As EventArgs) Handles LogOut.Click
+        Me.Hide()
+        FLogin.Show()
     End Sub
 End Class

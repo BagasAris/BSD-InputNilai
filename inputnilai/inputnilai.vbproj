@@ -223,5 +223,8 @@
   <ItemGroup>
     <None Include="Resources\show.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="nilai.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

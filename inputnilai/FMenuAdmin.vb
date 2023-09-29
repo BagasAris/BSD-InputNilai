@@ -14,4 +14,9 @@
     Private Sub LevelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LevelToolStripMenuItem.Click
         FLevel.Show()
     End Sub
+
+    Private Sub GunaButton1_Click(sender As Object, e As EventArgs) Handles LogOut.Click
+        Me.Hide()
+        FLogin.Show()
+    End Sub
 End Class

@@ -21,9 +21,9 @@ Public Class FDataSiswa
     Sub tampilUser()
 
         Call koneksi()
-        DA = New MySqlDataAdapter("SELECT data_siswa.id, data_siswa.nama, data_siswa.nisn, data_siswa.jk, kelas.nama " &
+        DA = New MySqlDataAdapter("SELECT data_siswa.id_siswa, data_siswa.nama, data_siswa.nisn, data_siswa.jk, kelas.nama " &
     "FROM data_siswa " &
-    "INNER JOIN kelas ON data_siswa.id_kelas = kelas.id_kelas", CONN)
+    "INNER JOIN kelas ON data_siswa.kelas = kelas.id_kelas", CONN)
         DS = New DataSet
         DA.Fill(DS, "data_siswa")
         DGdatasiswa.DataSource = DS.Tables("data_siswa")
@@ -33,9 +33,9 @@ Public Class FDataSiswa
     Sub aturDGV()
         Try
             DGdatasiswa.Columns(0).Width = 70
-            DGdatasiswa.Columns(1).Width = 130
+            DGdatasiswa.Columns(1).Width = 210
             DGdatasiswa.Columns(2).Width = 130
-            DGdatasiswa.Columns(3).Width = 130
+            DGdatasiswa.Columns(3).Width = 180
             DGdatasiswa.Columns(4).Width = 130
             DGdatasiswa.Columns(0).HeaderText = "ID"
             DGdatasiswa.Columns(1).HeaderText = "NAMA"
@@ -51,7 +51,7 @@ Public Class FDataSiswa
         Try
             Dim str As String
             'str = "INSERT INTO tb_petugas (id_petugas, username, password, nama_petugas, id_level) VALUES ('" & idPetugasTxt.Text & "','" & usernameTxt.Text & "', '" & passwordTxt.Text & "', '" & namaTxt.Text & "',' SELECT id_level FROM tb_level WHERE id_level = '" & idTxt.Text & "')"
-            str = "INSERT INTO data_siswa (id, nama, nisn, jk, id_kelas) VALUES ('" & idTxt.Text & "','" & namaTxt.Text & "','" & nisnTxt.Text & "','" & ComboBox1.Text & "',(Select id_kelas from kelas where nama='" & kelas.Text & "'))"
+            str = "INSERT INTO data_siswa (id_siswa, nama, nisn, jk, kelas) VALUES ('" & idTxt.Text & "','" & namaTxt.Text & "','" & nisnTxt.Text & "','" & ComboBox1.Text & "',(Select id_kelas from kelas where nama='" & kelas.Text & "'))"
             CMD = New MySql.Data.MySqlClient.MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Insert Data Siswa Berhasil Dilakukan")
@@ -66,7 +66,7 @@ Public Class FDataSiswa
         Try
             Call koneksi()
             Dim str As String
-            str = "UPDATE data_siswa SET id = '" & idTxt.Text & "', nama = '" & namaTxt.Text & "', nisn = '" & nisnTxt.Text & "', jk = '" & ComboBox1.Text & "', id_kelas = (Select id_kelas from kelas where nama='" & kelas.Text & "') WHERE id = '" & idTxt.Text & "'"
+            str = "UPDATE data_siswa SET id_siswa = '" & idTxt.Text & "', nama = '" & namaTxt.Text & "', nisn = '" & nisnTxt.Text & "', jk = '" & ComboBox1.Text & "', kelas = (Select id_kelas from kelas where nama='" & kelas.Text & "') WHERE id_siswa = '" & idTxt.Text & "'"
             CMD = New MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Update Data Siswa Berhasil Dilakukan.")
@@ -81,7 +81,7 @@ Public Class FDataSiswa
         Try
             Call koneksi()
             Dim str As String
-            str = "delete from data_siswa where id = '" & idTxt.Text & "'"
+            str = "delete from data_siswa where id_siswa = '" & idTxt.Text & "'"
             CMD = New MySql.Data.MySqlClient.MySqlCommand(str, CONN)
             CMD.ExecuteNonQuery()
             MessageBox.Show("Data Siswa Berhasil Dihapus.")

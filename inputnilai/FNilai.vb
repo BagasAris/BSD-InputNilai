@@ -47,12 +47,12 @@ Public Class FNilai
     Sub aturDGV()
         Try
             DGnilai.Columns(0).Width = 70
-            DGnilai.Columns(1).Width = 130
-            DGnilai.Columns(2).Width = 130
-            DGnilai.Columns(3).Width = 130
-            DGnilai.Columns(4).Width = 130
-            DGnilai.Columns(5).Width = 130
-            DGnilai.Columns(6).Width = 130
+            DGnilai.Columns(1).Width = 210
+            DGnilai.Columns(2).Width = 210
+            DGnilai.Columns(3).Width = 100
+            DGnilai.Columns(4).Width = 100
+            DGnilai.Columns(5).Width = 100
+            DGnilai.Columns(6).Width = 100
             DGnilai.Columns(0).HeaderText = "ID"
             DGnilai.Columns(1).HeaderText = "NAMA MATA PELAJARAN"
             DGnilai.Columns(2).HeaderText = "NAMA SISWA"
@@ -148,7 +148,7 @@ Public Class FNilai
         DGnilai.DataSource = tampil
         DGnilai.Refresh()
         'memunculkan data tabel berdasarkan pencarian Txt_Cari(memasukkan ID Anggota)
-        tampil.RowFilter = "nama_siswa = '" & cariTxt.Text & "'"
+        tampil.RowFilter = "nama = '" & cariTxt.Text & "'"
         DGnilai.Refresh()
     End Sub
 End Class
