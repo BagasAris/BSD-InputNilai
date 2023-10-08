@@ -38,55 +38,65 @@ Partial Class FKelas
         Me.generasiTxt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New Guna.UI.WinForms.GunaComboBox()
         CType(Me.DGdatakelas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cariBtn
         '
+        Me.cariBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.cariBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cariBtn.Location = New System.Drawing.Point(704, 370)
         Me.cariBtn.Name = "cariBtn"
         Me.cariBtn.Size = New System.Drawing.Size(75, 23)
         Me.cariBtn.TabIndex = 65
         Me.cariBtn.Text = "CARI"
-        Me.cariBtn.UseVisualStyleBackColor = True
+        Me.cariBtn.UseVisualStyleBackColor = False
         '
         'keluarBtn
         '
+        Me.keluarBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.keluarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.keluarBtn.Location = New System.Drawing.Point(349, 370)
         Me.keluarBtn.Name = "keluarBtn"
         Me.keluarBtn.Size = New System.Drawing.Size(75, 23)
         Me.keluarBtn.TabIndex = 64
         Me.keluarBtn.Text = "KELUAR"
-        Me.keluarBtn.UseVisualStyleBackColor = True
+        Me.keluarBtn.UseVisualStyleBackColor = False
         '
         'hapusBtn
         '
+        Me.hapusBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.hapusBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.hapusBtn.Location = New System.Drawing.Point(240, 370)
         Me.hapusBtn.Name = "hapusBtn"
         Me.hapusBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.hapusBtn.Size = New System.Drawing.Size(75, 23)
         Me.hapusBtn.TabIndex = 63
         Me.hapusBtn.Text = "HAPUS"
-        Me.hapusBtn.UseVisualStyleBackColor = True
+        Me.hapusBtn.UseVisualStyleBackColor = False
         '
         'editBtn
         '
+        Me.editBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.editBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.editBtn.Location = New System.Drawing.Point(126, 370)
         Me.editBtn.Name = "editBtn"
         Me.editBtn.Size = New System.Drawing.Size(75, 23)
         Me.editBtn.TabIndex = 62
         Me.editBtn.Text = "EDIT"
-        Me.editBtn.UseVisualStyleBackColor = True
+        Me.editBtn.UseVisualStyleBackColor = False
         '
         'tambahBtn
         '
+        Me.tambahBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.tambahBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tambahBtn.Location = New System.Drawing.Point(21, 370)
         Me.tambahBtn.Name = "tambahBtn"
         Me.tambahBtn.Size = New System.Drawing.Size(75, 23)
         Me.tambahBtn.TabIndex = 61
         Me.tambahBtn.Text = "TAMBAH"
-        Me.tambahBtn.UseVisualStyleBackColor = True
+        Me.tambahBtn.UseVisualStyleBackColor = False
         '
         'cariTxt
         '
@@ -139,9 +149,10 @@ Partial Class FKelas
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(346, 22)
+        Me.Label1.Font = New System.Drawing.Font("Yellowtail", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(258, 1)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 13)
+        Me.Label1.Size = New System.Drawing.Size(341, 61)
         Me.Label1.TabIndex = 54
         Me.Label1.Text = "Form Data Kelas"
         '
@@ -180,11 +191,21 @@ Partial Class FKelas
         '
         'ComboBox1
         '
+        Me.ComboBox1.BackColor = System.Drawing.Color.Transparent
+        Me.ComboBox1.BaseColor = System.Drawing.Color.White
+        Me.ComboBox1.BorderColor = System.Drawing.Color.Silver
+        Me.ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FocusedColor = System.Drawing.Color.Empty
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.ComboBox1.ForeColor = System.Drawing.Color.Black
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Pengembangan Perangkat Lunak dan Gim", "Desain Gambar Mesin", "Desain Pemodelan Informasi Bangunan", "Teknik Komputer Jaringan", "Teknik Kendaraan Ringan Otomotif", "Teknik Bisnis Sepeda Motor", "Teknik Instalasi Tenaga Listrik", "Teknik Elektronika Industri", "Teknik Mesin", "Teknik Pengelasan", "Teknik Fabrika Logam dan Manufactur"})
-        Me.ComboBox1.Location = New System.Drawing.Point(103, 105)
+        Me.ComboBox1.Location = New System.Drawing.Point(103, 99)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(285, 21)
+        Me.ComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ComboBox1.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.ComboBox1.Size = New System.Drawing.Size(285, 26)
         Me.ComboBox1.TabIndex = 69
         '
         'FKelas
@@ -233,5 +254,5 @@ Partial Class FKelas
     Friend WithEvents generasiTxt As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox1 As Guna.UI.WinForms.GunaComboBox
 End Class

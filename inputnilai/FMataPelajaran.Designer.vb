@@ -36,7 +36,7 @@ Partial Class FMataPelajaran
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGmapel = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New Guna.UI.WinForms.GunaComboBox()
         CType(Me.DGmapel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -120,30 +120,30 @@ Partial Class FMataPelajaran
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe Script", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(453, 419)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 20)
+        Me.Label5.Size = New System.Drawing.Size(31, 16)
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "Cari"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe Script", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(24, 84)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(22, 20)
+        Me.Label4.Size = New System.Drawing.Size(18, 16)
         Me.Label4.TabIndex = 21
         Me.Label4.Text = "Id"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe Script", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(17, 132)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(161, 20)
+        Me.Label3.Size = New System.Drawing.Size(138, 16)
         Me.Label3.TabIndex = 20
         Me.Label3.Text = "Nama Mata Pelajaran"
         '
@@ -168,19 +168,29 @@ Partial Class FMataPelajaran
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe Script", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(17, 180)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 20)
+        Me.Label2.Size = New System.Drawing.Size(75, 16)
         Me.Label2.TabIndex = 32
         Me.Label2.Text = "Nama Guru"
         '
         'ComboBox1
         '
+        Me.ComboBox1.BackColor = System.Drawing.Color.Transparent
+        Me.ComboBox1.BaseColor = System.Drawing.Color.White
+        Me.ComboBox1.BorderColor = System.Drawing.Color.Silver
+        Me.ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FocusedColor = System.Drawing.Color.Empty
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.ComboBox1.ForeColor = System.Drawing.Color.Black
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(184, 179)
+        Me.ComboBox1.Location = New System.Drawing.Point(184, 180)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(249, 21)
+        Me.ComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ComboBox1.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.ComboBox1.Size = New System.Drawing.Size(249, 26)
         Me.ComboBox1.TabIndex = 33
         '
         'FMataPelajaran
@@ -224,5 +234,5 @@ Partial Class FMataPelajaran
     Friend WithEvents Label1 As Label
     Friend WithEvents DGmapel As DataGridView
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox1 As Guna.UI.WinForms.GunaComboBox
 End Class

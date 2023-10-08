@@ -24,7 +24,6 @@ Partial Class FGuru
     Private Sub InitializeComponent()
         Me.nipTxt = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.jk = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cariBtn = New System.Windows.Forms.Button()
         Me.keluarBtn = New System.Windows.Forms.Button()
@@ -40,7 +39,8 @@ Partial Class FGuru
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGdataguru = New System.Windows.Forms.DataGridView()
-        Me.level = New System.Windows.Forms.ComboBox()
+        Me.jk = New Guna.UI.WinForms.GunaComboBox()
+        Me.level = New Guna.UI.WinForms.GunaComboBox()
         CType(Me.DGdataguru, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,15 +60,6 @@ Partial Class FGuru
         Me.Label7.TabIndex = 36
         Me.Label7.Text = "Nip"
         '
-        'jk
-        '
-        Me.jk.FormattingEnabled = True
-        Me.jk.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
-        Me.jk.Location = New System.Drawing.Point(491, 69)
-        Me.jk.Name = "jk"
-        Me.jk.Size = New System.Drawing.Size(285, 21)
-        Me.jk.TabIndex = 35
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -80,49 +71,59 @@ Partial Class FGuru
         '
         'cariBtn
         '
+        Me.cariBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.cariBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cariBtn.Location = New System.Drawing.Point(704, 401)
         Me.cariBtn.Name = "cariBtn"
         Me.cariBtn.Size = New System.Drawing.Size(75, 23)
         Me.cariBtn.TabIndex = 33
         Me.cariBtn.Text = "CARI"
-        Me.cariBtn.UseVisualStyleBackColor = True
+        Me.cariBtn.UseVisualStyleBackColor = False
         '
         'keluarBtn
         '
+        Me.keluarBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.keluarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.keluarBtn.Location = New System.Drawing.Point(349, 401)
         Me.keluarBtn.Name = "keluarBtn"
         Me.keluarBtn.Size = New System.Drawing.Size(75, 23)
         Me.keluarBtn.TabIndex = 32
         Me.keluarBtn.Text = "KELUAR"
-        Me.keluarBtn.UseVisualStyleBackColor = True
+        Me.keluarBtn.UseVisualStyleBackColor = False
         '
         'hapusBtn
         '
+        Me.hapusBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.hapusBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.hapusBtn.Location = New System.Drawing.Point(240, 401)
         Me.hapusBtn.Name = "hapusBtn"
         Me.hapusBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.hapusBtn.Size = New System.Drawing.Size(75, 23)
         Me.hapusBtn.TabIndex = 31
         Me.hapusBtn.Text = "HAPUS"
-        Me.hapusBtn.UseVisualStyleBackColor = True
+        Me.hapusBtn.UseVisualStyleBackColor = False
         '
         'editBtn
         '
+        Me.editBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.editBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.editBtn.Location = New System.Drawing.Point(126, 401)
         Me.editBtn.Name = "editBtn"
         Me.editBtn.Size = New System.Drawing.Size(75, 23)
         Me.editBtn.TabIndex = 30
         Me.editBtn.Text = "EDIT"
-        Me.editBtn.UseVisualStyleBackColor = True
+        Me.editBtn.UseVisualStyleBackColor = False
         '
         'tambahBtn
         '
+        Me.tambahBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.tambahBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tambahBtn.Location = New System.Drawing.Point(21, 401)
         Me.tambahBtn.Name = "tambahBtn"
         Me.tambahBtn.Size = New System.Drawing.Size(75, 23)
         Me.tambahBtn.TabIndex = 29
         Me.tambahBtn.Text = "TAMBAH"
-        Me.tambahBtn.UseVisualStyleBackColor = True
+        Me.tambahBtn.UseVisualStyleBackColor = False
         '
         'cariTxt
         '
@@ -184,9 +185,10 @@ Partial Class FGuru
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(346, 27)
+        Me.Label1.Font = New System.Drawing.Font("Yellowtail", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(259, 6)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 13)
+        Me.Label1.Size = New System.Drawing.Size(326, 61)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Form Data Guru"
         '
@@ -198,13 +200,42 @@ Partial Class FGuru
         Me.DGdataguru.Size = New System.Drawing.Size(752, 206)
         Me.DGdataguru.TabIndex = 19
         '
+        'jk
+        '
+        Me.jk.BackColor = System.Drawing.Color.Transparent
+        Me.jk.BaseColor = System.Drawing.Color.White
+        Me.jk.BorderColor = System.Drawing.Color.Silver
+        Me.jk.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.jk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.jk.FocusedColor = System.Drawing.Color.Empty
+        Me.jk.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.jk.ForeColor = System.Drawing.Color.Black
+        Me.jk.FormattingEnabled = True
+        Me.jk.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
+        Me.jk.Location = New System.Drawing.Point(492, 70)
+        Me.jk.Name = "jk"
+        Me.jk.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.jk.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.jk.Size = New System.Drawing.Size(284, 26)
+        Me.jk.TabIndex = 39
+        '
         'level
         '
+        Me.level.BackColor = System.Drawing.Color.Transparent
+        Me.level.BaseColor = System.Drawing.Color.White
+        Me.level.BorderColor = System.Drawing.Color.Silver
+        Me.level.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.level.FocusedColor = System.Drawing.Color.Empty
+        Me.level.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.level.ForeColor = System.Drawing.Color.Black
         Me.level.FormattingEnabled = True
-        Me.level.Location = New System.Drawing.Point(491, 109)
+        Me.level.Location = New System.Drawing.Point(492, 105)
         Me.level.Name = "level"
-        Me.level.Size = New System.Drawing.Size(285, 21)
-        Me.level.TabIndex = 38
+        Me.level.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.level.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.level.Size = New System.Drawing.Size(284, 26)
+        Me.level.TabIndex = 40
         '
         'FGuru
         '
@@ -212,9 +243,9 @@ Partial Class FGuru
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.level)
+        Me.Controls.Add(Me.jk)
         Me.Controls.Add(Me.nipTxt)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.jk)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cariBtn)
         Me.Controls.Add(Me.keluarBtn)
@@ -240,7 +271,6 @@ Partial Class FGuru
 
     Friend WithEvents nipTxt As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents jk As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents cariBtn As Button
     Friend WithEvents keluarBtn As Button
@@ -256,5 +286,6 @@ Partial Class FGuru
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DGdataguru As DataGridView
-    Friend WithEvents level As ComboBox
+    Friend WithEvents jk As Guna.UI.WinForms.GunaComboBox
+    Friend WithEvents level As Guna.UI.WinForms.GunaComboBox
 End Class

@@ -151,4 +151,8 @@ Public Class FNilai
         tampil.RowFilter = "nama = '" & cariTxt.Text & "'"
         DGnilai.Refresh()
     End Sub
+
+    Private Sub GunaComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles mapel.SelectedIndexChanged
+
+    End Sub
 End Class

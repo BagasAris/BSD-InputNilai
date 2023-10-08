@@ -44,56 +44,66 @@ Partial Class FNilai
         Me.uas2Txt = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.mapel = New System.Windows.Forms.ComboBox()
-        Me.siswa = New System.Windows.Forms.ComboBox()
+        Me.mapel = New Guna.UI.WinForms.GunaComboBox()
+        Me.siswa = New Guna.UI.WinForms.GunaComboBox()
         CType(Me.DGnilai, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cariBtn
         '
+        Me.cariBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.cariBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cariBtn.Location = New System.Drawing.Point(701, 390)
         Me.cariBtn.Name = "cariBtn"
         Me.cariBtn.Size = New System.Drawing.Size(75, 23)
         Me.cariBtn.TabIndex = 44
         Me.cariBtn.Text = "CARI"
-        Me.cariBtn.UseVisualStyleBackColor = True
+        Me.cariBtn.UseVisualStyleBackColor = False
         '
         'keluarBtn
         '
+        Me.keluarBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.keluarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.keluarBtn.Location = New System.Drawing.Point(319, 390)
         Me.keluarBtn.Name = "keluarBtn"
         Me.keluarBtn.Size = New System.Drawing.Size(75, 23)
         Me.keluarBtn.TabIndex = 43
         Me.keluarBtn.Text = "KELUAR"
-        Me.keluarBtn.UseVisualStyleBackColor = True
+        Me.keluarBtn.UseVisualStyleBackColor = False
         '
         'hapusBtn
         '
+        Me.hapusBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.hapusBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.hapusBtn.Location = New System.Drawing.Point(222, 391)
         Me.hapusBtn.Name = "hapusBtn"
         Me.hapusBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.hapusBtn.Size = New System.Drawing.Size(75, 23)
         Me.hapusBtn.TabIndex = 42
         Me.hapusBtn.Text = "HAPUS"
-        Me.hapusBtn.UseVisualStyleBackColor = True
+        Me.hapusBtn.UseVisualStyleBackColor = False
         '
         'editBtn
         '
+        Me.editBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.editBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.editBtn.Location = New System.Drawing.Point(125, 390)
         Me.editBtn.Name = "editBtn"
         Me.editBtn.Size = New System.Drawing.Size(75, 23)
         Me.editBtn.TabIndex = 41
         Me.editBtn.Text = "EDIT"
-        Me.editBtn.UseVisualStyleBackColor = True
+        Me.editBtn.UseVisualStyleBackColor = False
         '
         'tambahBtn
         '
+        Me.tambahBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.tambahBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tambahBtn.Location = New System.Drawing.Point(24, 390)
         Me.tambahBtn.Name = "tambahBtn"
         Me.tambahBtn.Size = New System.Drawing.Size(75, 23)
         Me.tambahBtn.TabIndex = 40
         Me.tambahBtn.Text = "TAMBAH"
-        Me.tambahBtn.UseVisualStyleBackColor = True
+        Me.tambahBtn.UseVisualStyleBackColor = False
         '
         'cariTxt
         '
@@ -112,7 +122,7 @@ Partial Class FNilai
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(412, 393)
+        Me.Label5.Location = New System.Drawing.Point(489, 396)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(25, 13)
         Me.Label5.TabIndex = 36
@@ -121,7 +131,7 @@ Partial Class FNilai
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(26, 46)
+        Me.Label4.Location = New System.Drawing.Point(112, 43)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(16, 13)
         Me.Label4.TabIndex = 35
@@ -139,9 +149,10 @@ Partial Class FNilai
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(333, 9)
+        Me.Label1.Font = New System.Drawing.Font("Yellowtail", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(311, -2)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 13)
+        Me.Label1.Size = New System.Drawing.Size(163, 45)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Form Nilai"
         '
@@ -156,7 +167,7 @@ Partial Class FNilai
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(408, 43)
+        Me.Label2.Location = New System.Drawing.Point(448, 43)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 13)
         Me.Label2.TabIndex = 45
@@ -236,19 +247,39 @@ Partial Class FNilai
         '
         'mapel
         '
+        Me.mapel.BackColor = System.Drawing.Color.Transparent
+        Me.mapel.BaseColor = System.Drawing.Color.White
+        Me.mapel.BorderColor = System.Drawing.Color.Silver
+        Me.mapel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.mapel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.mapel.FocusedColor = System.Drawing.Color.Empty
+        Me.mapel.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.mapel.ForeColor = System.Drawing.Color.Black
         Me.mapel.FormattingEnabled = True
-        Me.mapel.Location = New System.Drawing.Point(141, 84)
+        Me.mapel.Location = New System.Drawing.Point(141, 81)
         Me.mapel.Name = "mapel"
-        Me.mapel.Size = New System.Drawing.Size(249, 21)
-        Me.mapel.TabIndex = 56
+        Me.mapel.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.mapel.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.mapel.Size = New System.Drawing.Size(249, 26)
+        Me.mapel.TabIndex = 58
         '
         'siswa
         '
+        Me.siswa.BackColor = System.Drawing.Color.Transparent
+        Me.siswa.BaseColor = System.Drawing.Color.White
+        Me.siswa.BorderColor = System.Drawing.Color.Silver
+        Me.siswa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.siswa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.siswa.FocusedColor = System.Drawing.Color.Empty
+        Me.siswa.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.siswa.ForeColor = System.Drawing.Color.Black
         Me.siswa.FormattingEnabled = True
-        Me.siswa.Location = New System.Drawing.Point(523, 40)
+        Me.siswa.Location = New System.Drawing.Point(523, 37)
         Me.siswa.Name = "siswa"
-        Me.siswa.Size = New System.Drawing.Size(249, 21)
-        Me.siswa.TabIndex = 57
+        Me.siswa.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.siswa.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.siswa.Size = New System.Drawing.Size(249, 26)
+        Me.siswa.TabIndex = 59
         '
         'FNilai
         '
@@ -309,6 +340,6 @@ Partial Class FNilai
     Friend WithEvents uas2Txt As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents mapel As ComboBox
-    Friend WithEvents siswa As ComboBox
+    Friend WithEvents mapel As Guna.UI.WinForms.GunaComboBox
+    Friend WithEvents siswa As Guna.UI.WinForms.GunaComboBox
 End Class

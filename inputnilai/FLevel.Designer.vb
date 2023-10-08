@@ -40,49 +40,59 @@ Partial Class FLevel
         '
         'cariBtn
         '
+        Me.cariBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.cariBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cariBtn.Location = New System.Drawing.Point(704, 339)
         Me.cariBtn.Name = "cariBtn"
         Me.cariBtn.Size = New System.Drawing.Size(75, 23)
         Me.cariBtn.TabIndex = 52
         Me.cariBtn.Text = "CARI"
-        Me.cariBtn.UseVisualStyleBackColor = True
+        Me.cariBtn.UseVisualStyleBackColor = False
         '
         'keluarBtn
         '
+        Me.keluarBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.keluarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.keluarBtn.Location = New System.Drawing.Point(349, 339)
         Me.keluarBtn.Name = "keluarBtn"
         Me.keluarBtn.Size = New System.Drawing.Size(75, 23)
         Me.keluarBtn.TabIndex = 51
         Me.keluarBtn.Text = "KELUAR"
-        Me.keluarBtn.UseVisualStyleBackColor = True
+        Me.keluarBtn.UseVisualStyleBackColor = False
         '
         'hapusBtn
         '
+        Me.hapusBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.hapusBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.hapusBtn.Location = New System.Drawing.Point(240, 339)
         Me.hapusBtn.Name = "hapusBtn"
         Me.hapusBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.hapusBtn.Size = New System.Drawing.Size(75, 23)
         Me.hapusBtn.TabIndex = 50
         Me.hapusBtn.Text = "HAPUS"
-        Me.hapusBtn.UseVisualStyleBackColor = True
+        Me.hapusBtn.UseVisualStyleBackColor = False
         '
         'editBtn
         '
+        Me.editBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.editBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.editBtn.Location = New System.Drawing.Point(126, 339)
         Me.editBtn.Name = "editBtn"
         Me.editBtn.Size = New System.Drawing.Size(75, 23)
         Me.editBtn.TabIndex = 49
         Me.editBtn.Text = "EDIT"
-        Me.editBtn.UseVisualStyleBackColor = True
+        Me.editBtn.UseVisualStyleBackColor = False
         '
         'tambahBtn
         '
+        Me.tambahBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.tambahBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tambahBtn.Location = New System.Drawing.Point(21, 339)
         Me.tambahBtn.Name = "tambahBtn"
         Me.tambahBtn.Size = New System.Drawing.Size(75, 23)
         Me.tambahBtn.TabIndex = 48
         Me.tambahBtn.Text = "TAMBAH"
-        Me.tambahBtn.UseVisualStyleBackColor = True
+        Me.tambahBtn.UseVisualStyleBackColor = False
         '
         'cariTxt
         '
@@ -128,9 +138,10 @@ Partial Class FLevel
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(346, 27)
+        Me.Label1.Font = New System.Drawing.Font("Yellowtail", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(229, 6)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 13)
+        Me.Label1.Size = New System.Drawing.Size(336, 61)
         Me.Label1.TabIndex = 40
         Me.Label1.Text = "Form Data Level"
         '
